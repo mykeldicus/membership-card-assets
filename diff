@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Membership Card</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card-container {
+      position: relative;
+      width: 640px;
+      height: 400px;
+      background: url('https://raw.githubusercontent.com/mykeldicus/membership-card-assets/main/MemCard3.png') no-repeat center center;
+      background-size: cover;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    .overlay-text {
+      position: absolute;
+      color: white;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px black;
+    }
+    .member-name {
+      top: 30%;
+      left: 10%;
+      font-size: 22px;
+    }
+    .member-level {
+      top: 38%;
+      left: 10%;
+      font-size: 18px;
+    }
+    .join-date {
+      bottom: 15%;
+      left: 10%;
+      font-size: 16px;
+    }
+    .member-number {
+      bottom: 15%;
+      right: 10%;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="overlay-text member-name" id="memberName">Member Name</div>
+    <div class="overlay-text member-level" id="memberLevel">Membership Level</div>
+    <div class="overlay-text join-date" id="joinDate">Join Date</div>
+    <div class="overlay-text member-number" id="memberNumber">Member No.</div>
+  </div>
+
+  <script>
+    // Placeholder for pulling data using RENXT SKY API (example only)
+    const data = {
+      firstName: "Jane",
+      lastName: "Doe",
+      membershipLevel: "Gold",
+      joinDate: "06/01/2024",
+      memberNo: "MMA123456"
+    };
+
+    document.getElementById('memberName').textContent = `${data.firstName} ${data.lastName}`;
+    document.getElementById('memberLevel').textContent = `${data.membershipLevel}`;
+    document.getElementById('joinDate').textContent = `Join Date: ${data.joinDate}`;
+    document.getElementById('memberNumber').textContent = `Member #: ${data.memberNo}`;
+  </script>
+</body>
+</html>
