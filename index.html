@@ -23,11 +23,11 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.3);
     }
     .overlay-text {
-  position: absolute;
-  color: black;
-  font-weight: bold;
-  text-shadow: none;
-}
+      position: absolute;
+      color: black;
+      font-weight: bold;
+      text-shadow: none;
+    }
     .member-name {
       top: 30%;
       left: 10%;
@@ -38,25 +38,15 @@
       left: 10%;
       font-size: 18px;
     }
-    .join-date {
-      bottom: 15%;
-      left: 10%;
-      font-size: 16px;
-    }
-    .member-number {
-      bottom: 15%;
-      right: 10%;
-      font-size: 16px;
-    }
+    
+    
   </style>
 </head>
 <body>
   <div class="card-container">
     <div class="overlay-text member-name" id="memberName">Member Name</div>
     <div class="overlay-text member-level" id="memberLevel">Membership Level</div>
-    <div class="overlay-text join-date" id="joinDate">Join Date</div>
-    <div class="overlay-text member-number" id="memberNumber">Member No.</div>
-  </div>
+          </div>
 
   <script>
     // Placeholder for pulling data using RENXT SKY API (example only)
@@ -70,8 +60,7 @@
 
     document.getElementById('memberName').textContent = `${data.firstName} ${data.lastName}`;
     document.getElementById('memberLevel').textContent = `${data.membershipLevel}`;
-    document.getElementById('joinDate').textContent = `Join Date: ${data.joinDate}`;
-    document.getElementById('memberNumber').textContent = `Member #: ${data.memberNo}`;
-  </script>
+          </script>
 </body>
 </html>
+
