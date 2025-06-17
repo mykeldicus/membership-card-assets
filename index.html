@@ -38,12 +38,24 @@
       left: 10%;
       font-size: 18px;
     }
+    .join-date {
+      bottom: 15%;
+      left: 10%;
+      font-size: 16px;
+    }
+    .member-number {
+      bottom: 15%;
+      right: 10%;
+      font-size: 16px;
+    }
   </style>
 </head>
 <body>
   <div class="card-container">
     <div class="overlay-text member-name" id="memberName">Member Name</div>
     <div class="overlay-text member-level" id="memberLevel">Membership Level</div>
+    <div class="overlay-text join-date" id="joinDate">00/00/0000</div>
+    <div class="overlay-text member-number" id="memberNumber">MMA000000</div>
   </div>
 
   <script>
@@ -51,11 +63,15 @@
     const data = {
       firstName: "Jane",
       lastName: "Doe",
-      membershipLevel: "Gold"
+      membershipLevel: "Gold",
+      joinDate: "06/01/2024",
+      memberNo: "MMA123456"
     };
 
     document.getElementById('memberName').textContent = `${data.firstName} ${data.lastName}`;
     document.getElementById('memberLevel').textContent = `${data.membershipLevel}`;
+    document.getElementById('joinDate').textContent = `${data.joinDate}`;
+    document.getElementById('memberNumber').textContent = `${data.memberNo}`;
   </script>
 </body>
 </html>
